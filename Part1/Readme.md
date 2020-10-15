@@ -1,6 +1,7 @@
 ### 1.1
 
-```docker ps -a```
+`docker ps -a`
+
 ```bash
 tekipeps@tekipeps:~$ docker ps -a
 CONTAINER ID        IMAGE               COMMAND                  CREATED              STATUS                          PORTS               NAMES
@@ -11,14 +12,24 @@ CONTAINER ID        IMAGE               COMMAND                  CREATED        
 
 ### 1.2
 
-```docker ps -a```
+`docker ps -a`
+
 ```bash
 tekipeps@tekipeps:~$ docker ps -a
 CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
 ```
 
-```docker images```
+`docker images`
+
 ```bash
 tekipeps@tekipeps:~$ docker images
 REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
 ```
+
+### 1.3
+
+> The secret message: "This is the secret message" </br>
+> Steps: </br>
+> Navigate to the repo in docker hub </br>
+> Check the readme.md for the password </br>
+> Input the password in the terminal

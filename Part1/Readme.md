@@ -64,3 +64,26 @@ Thu, 19 Nov 2020 23:54:33 GMT
 ^C
 root@559c4c92a96c:/usr/app# 
 ```
+### 1.5
+
+```bash
+docker run -i ubuntu:xenial sh -c 'apt-get update -y; apt-get install curl -y; echo "Input website:"; read website; echo "Searching.."; sleep 1; curl http://$website;'
+```
+
+```bash
+Input website:
+helsinki.fi
+Searching..
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html><head>
+<title>301 Moved Permanently</title>
+</head><body>
+<h1>Moved Permanently</h1>
+<p>The document has moved <a href="http://www.helsinki.fi/">here</a>.</p>
+</body></html>
+100   231  100   231    0     0    492      0 --:--:-- --:--:-- --:--:--   493
+tekipeps@tekipeps:~$ 
+
+```

@@ -1,6 +1,7 @@
 ### 1.1
 
 `docker ps -a`
+
 ```bash
 tekipeps@tekipeps:~$ docker ps -a
 CONTAINER ID        IMAGE               COMMAND                  CREATED              STATUS                          PORTS               NAMES
@@ -12,12 +13,14 @@ CONTAINER ID        IMAGE               COMMAND                  CREATED        
 ### 1.2
 
 `docker ps -a`
+
 ```bash
 tekipeps@tekipeps:~$ docker ps -a
 CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
 ```
 
 `docker images`
+
 ```bash
 tekipeps@tekipeps:~$ docker images
 REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
@@ -32,23 +35,27 @@ REPOSITORY          TAG                 IMAGE ID            CREATED             
 > Input the password in the terminal
 
 ### 1.4
+
 > Secret message: "Docker is easy"
 
 #### commands:
 
 `docker run -d devopsdockeruh/exec_bash_exercise`
+
 ```bash
 tekipeps@tekipeps:~$ docker run -d devopsdockeruh/exec_bash_exercise
 559c4c92a96c1e184bfb583304386bd012e7a2cf78c606bea0e377a48a154096
 ```
 
 `docker exec -it 559c4c92a96c bash`
+
 ```bash
 tekipeps@tekipeps:~$ docker exec -it 559c4c92a96c bash
-root@559c4c92a96c:/usr/app# 
+root@559c4c92a96c:/usr/app#
 ```
 
 `tail -f ./logs.txt`
+
 ```bash
 root@559c4c92a96c:/usr/app# tail -f ./logs.txt
 Thu, 19 Nov 2020 23:54:12 GMT
@@ -62,8 +69,9 @@ Secret message is:
 "Docker is easy"
 Thu, 19 Nov 2020 23:54:33 GMT
 ^C
-root@559c4c92a96c:/usr/app# 
+root@559c4c92a96c:/usr/app#
 ```
+
 ### 1.5
 
 ```bash
@@ -84,6 +92,26 @@ Searching..
 <p>The document has moved <a href="http://www.helsinki.fi/">here</a>.</p>
 </body></html>
 100   231  100   231    0     0    492      0 --:--:-- --:--:-- --:--:--   493
-tekipeps@tekipeps:~$ 
+tekipeps@tekipeps:~$
 
+```
+
+### 1.6
+
+`Dockerfile`
+
+```Docker
+FROM devopsdockeruh/overwrite_cmd_exercise
+
+WORKDIR /home/tekipeps/docker1.6
+CMD ["/bin/bash"]
+```
+
+command
+
+```bash
+tekipeps@tekipeps:~$ docker run -it docker-clock -c
+1
+2
+^Ctekipeps@tekipeps:~$
 ```

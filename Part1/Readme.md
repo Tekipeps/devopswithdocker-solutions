@@ -143,3 +143,12 @@ command
 ```bash
 docker run -it curler
 ```
+
+### 1.8
+
+commands
+
+```bash
+tekipeps@tekipeps:~/devopswithdocker-solutions$ touch logs.txt
+tekipeps@tekipeps:~/devopswithdocker-solutions$ docker run -v "$(pwd)/logs.txt:/usr/app/logs.txt" devopsdockeruh/first_volume_exercise
+```

@@ -115,3 +115,31 @@ tekipeps@tekipeps:~$ docker run -it docker-clock -c
 2
 ^Ctekipeps@tekipeps:~$
 ```
+
+### 1.7
+
+`Dockerfile`
+
+```Dockerfile
+FROM ubuntu:16.04
+
+WORKDIR /home/tekipeps/docker1.7
+
+RUN apt-get update && apt-get install -y curl
+
+COPY script.sh .
+
+CMD ["bash", "script.sh"]
+```
+
+`script.sh`
+
+```bash
+echo "Input website: "; read website; echo "Searching.."; sleep 1; curl http://$website;
+```
+
+command
+
+```bash
+docker run -it curler
+```

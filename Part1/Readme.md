@@ -152,3 +152,12 @@ commands
 tekipeps@tekipeps:~/devopswithdocker-solutions$ touch logs.txt
 tekipeps@tekipeps:~/devopswithdocker-solutions$ docker run -v "$(pwd)/logs.txt:/usr/app/logs.txt" devopsdockeruh/first_volume_exercise
 ```
+
+### 1.9
+
+```bash
+tekipeps@tekipeps:~/devopswithdocker-solutions$ docker run -d -p 3000:80 devopsdockeruh/ports_exercise
+tekipeps@tekipeps:~/devopswithdocker-solutions$ curl http://localhost:3000
+Ports configured correctly!!
+tekipeps@tekipeps:~/devopswithdocker-solutions$
+```

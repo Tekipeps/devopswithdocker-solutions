@@ -161,3 +161,21 @@ tekipeps@tekipeps:~/devopswithdocker-solutions$ curl http://localhost:3000
 Ports configured correctly!!
 tekipeps@tekipeps:~/devopswithdocker-solutions$
 ```
+
+### 1.10
+
+> Dockerfile
+
+```Dockerfile
+FROM ubuntu:latest
+
+WORKDIR /usr/bin/frontend
+
+COPY . .
+
+RUN apt-get update && apt-get install -y curl && curl -sL https://deb.nodesource.com/setup_10.x | bash && apt install -y nodejs
+
+RUN npm install && npm run build
+
+ENTRYPOINT [ "npm", "start" ]
+```
